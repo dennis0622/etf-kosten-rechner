@@ -8,16 +8,19 @@ weiter = 'Ja'
 
 print('Hallo, bitte geben Sie bis zu 3 ETFs mit den entsprechenden Kosten und deren Gewichtung im Portfolio ein.\n')
 
-while i <= 2 and weiter == 'Ja':
+while i <= 2:
+
     if weiter == 'Ja':
         etf_namen.append(input('\nWie heißt der ETF? ').upper())
         etf_kosten.append(float(input('Wie teuer ist der ETF in Prozent (z.B. 0.3)? ')))
         etf_gewichtung.append(float(input('Welchen Anteil hat der ETF am Gesamtportfolio in Prozent (z.B. 55)? ')))
-        weiter = input('ETF eingeben (Ja oder Nein)?  ').title()
         i +=1
-
-
-
+        weiter = input('Weiteren ETF eingeben (Ja oder Nein)?  ').title()
+    elif weiter == 'Nein':
+        break
+    else:
+        print('Bitte prüfen Sie Ihre Eingabe!\n')
+        weiter = input('\nWeiteren ETF eingeben (Ja oder Nein)?  ').title()
 
 print()
 print('ETFs:', etf_namen)
