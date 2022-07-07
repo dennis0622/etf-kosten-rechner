@@ -15,9 +15,9 @@ while i <= 2:
     print()
     i +=1
 
-print('ETFs: ', etf_namen)
-print('ETF Kosten: ', etf_kosten)
-print('ETF Gewichtung: ', etf_gewichtung)
+print('ETFs:', etf_namen)
+print('ETF Kosten:', etf_kosten)
+print('ETF Gewichtung:', etf_gewichtung)
 print()
 
 
