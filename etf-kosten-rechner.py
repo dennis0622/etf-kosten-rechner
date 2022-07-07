@@ -25,16 +25,15 @@ print()
 
 i2 = 0
 index = 0
+zähler = 0.0
 
-while i2 <= len(etf_kosten):
-    zähler += etf_namen[index] * etf_gewichtung[index]
+while i2 <= 2:
+    zähler += etf_kosten[index] * etf_gewichtung[index]
     index += 1
     i2 += 1
 
 nenner = sum(etf_gewichtung)
+gew_ges_kosten = float(zähler / nenner)
 
-def berechnung(zähler,nenner):
-    gew_ges_kosten = zähler / nenner
-    return gew_ges_kosten
 
-print('Die TER-Gesamtkosten für das eingegebene Portfolio betragen: ', gew_ges_kosten, ' %.')
+print('Die TER-Gesamtkosten für das eingegebene Portfolio betragen {} %.'.format(gew_ges_kosten))
