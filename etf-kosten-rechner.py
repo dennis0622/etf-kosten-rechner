@@ -6,9 +6,9 @@ etf_gewichtung = []
 i = 0
 weiter = 'Ja'
 
-print('Hallo, bitte geben Sie bis zu 3 ETFs mit den entsprechenden Kosten und deren Gewichtung im Portfolio ein.\n')
+print('Hallo, bitte geben Sie Ihre ETFs mit den entsprechenden Kosten und deren Gewichtung im Portfolio ein.\n')
 
-while i <= 2:
+while weiter == 'Ja':
 
     if weiter == 'Ja':
         etf_namen.append(input('\nWie heißt der ETF? ').upper())
@@ -23,9 +23,11 @@ while i <= 2:
         weiter = input('\nWeiteren ETF eingeben (Ja oder Nein)?  ').title()
 
 print()
+print("*" *5,"Ihr Portfolio:","*"*5)
+print()
 print('ETFs:', etf_namen)
-print('ETF Kosten:', etf_kosten)
-print('ETF Gewichtung:', etf_gewichtung)
+print('ETF-Kosten:', etf_kosten)
+print('ETF-Gewichtung:', etf_gewichtung)
 print()
 
 
@@ -43,5 +45,6 @@ for k in etf_kosten:
 nenner = sum(etf_gewichtung)
 gew_ges_kosten = float(zähler / nenner)
 
-
+print("*" *5,"TER-Kosten:","*"*5)
+print()
 print('Die TER-Gesamtkosten für das eingegebene Portfolio betragen {:.2f}%.'.format(gew_ges_kosten))
